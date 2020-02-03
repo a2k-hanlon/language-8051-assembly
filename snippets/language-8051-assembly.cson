@@ -1,7 +1,5 @@
 '.source.8051-assembly':
 
-# all jump instructions have the prefix "JMP<jump type>"
-# all logical instructions have the prefix "L<logical operation>"
 # all call instructions have the prefix "CALL<call type>"
 
 
