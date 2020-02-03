@@ -1,6 +1,6 @@
 'fileTypes': [
-    'src'
     'asm'
+    'inc'
 ]
 'name': '8051 Assembly'
 'scopeName': 'source.8051-assembly'
@@ -10,8 +10,8 @@
             # highlighting important registers
             # comment it out if you don't prefer this
             {
-                'match': '\\b(A|C|DPTR|PC|R([0-9]+))\\b'
-                'name': 'string.important.register.8051-assembly'
+                'match': '(?i)\\b(A|ACC|C|DPTR|PC|PSW|A?R([0-9]+))\\b'
+                'name': 'variable.language.important.register.8051-assembly'#'string.important.register.8051-assembly'
             },
 
             {
@@ -21,12 +21,12 @@
             },
 
             {
-                'match': '#[0-9a-fA-F_]+[hH]?'
+                'match': '\\b((0x)[0-9a-fA-F_]+|[0-9a-fA-F_]+[hH])\\b'
                 'name': 'constant.numeric.hexadecimal.8051-assembly'
             },
 
             {
-                'match': '#([01_]+)[bB]'
+                'match': '\\b([01_]+)[bB]\\b'
                 'name': 'constant.numeric.binary.8051-assembly'
             },
 
@@ -36,23 +36,40 @@
             },
 
             {
-                'match': '\\b(ADD|ADDC|ANL|CJNE|CLR|CPL|DA|DEC|DIV|DJNZ|INC|JB|JNB|JBC|JC|JNC|JZ|JNZ|MOV|MOVC|MOVX|MUL|NOP|ORL|POP|PUSH|RL|RLC|RR|RRC|SETB|SUBB|SWAP|XCHD|XCH|XRL)\\b'
-                'name': 'keyword.instruction.8051-assembly'
+                'match': '(?i)\\b(ADD|ADDC|ANL|CJNE|CLR|CPL|DA|DEC|DIV|DJNZ|INC|JB|JNB|JBC|JC|JNC|JZ|JNZ|MOV|MOVC|MOVX|MUL|NOP|ORL|POP|PUSH|RL|RLC|RR|RRC|SETB|SUBB|SWAP|XCH|XRL)\\b'
+                'name': 'keyword.control.instruction.8051-assembly'
             },
 
             {
-                'match': '\\b(ORG|EQU|END|DB)\\b'
-                'name': 'storage.assembler.directive.8051-assembly'
+                'match': '(?i)\\b(ORG|EQU|END|DB|DW|DS|DBIT|CSEG|DSEG|BSEG|XSEG|HIGH|LOW|MAC|ENDMAC|DATA|AT)\\b'
+                'name': 'keyword.operator.assembler.directive.8051-assembly'
             },
 
             {
-                'match': '\\b(ACALL|AJMP|LCALL|LJMP|SJMP|JMP|RET|RETI)\\b'
+                'match': '(?i)\\b(ACALL|AJMP|LCALL|LJMP|SJMP|JMP|RET|RETI)\\b'
                 'name': 'support.function.jump-or-call.8051-assembly'
             },
 
-            {
-                'match': '^[0-9a-zA-Z_]+:'
-                'name': 'support.function.label.8051-assembly'
-            }
+            # {
+            #     'match': '^[0-9a-zA-Z]+:'
+            #     'name': 'support.function.label.8051-assembly'
+            # },
 
+            {
+                'match': '\".*\"'
+                'name': 'string.double.8051-assembly'
+            },
+
+            {
+                'match': '\'.*\''
+                'name': 'string.single.8051-assembly'
+            },
+
+            {
+                'match': '[@\\$]'
+                'name': 'keyword.operator.8051-assembly'
+            }#,
+
+                # 'match': '(?i)\\b\\w+(?=\\(.*\\))\\b'
+                # 'name': 'support.function.macro-call.8051-assembly'
         ]
