@@ -23,11 +23,11 @@
         'body': 'AJMP ${1:addr}\n$2'
 
     'ANL':
-        'prefix': 'LAND'
+        'prefix': 'AND'
         'body': 'ANL ${1:A}, ${2:srcbyte}\n$3'
 
     'ANL C':
-        'prefix': 'LANDC'
+        'prefix': 'ANDC'
         'body': 'ANL C, ${1:bit}\n$2'
 
 # B
@@ -132,11 +132,11 @@
 # L
 
     'LCALL':
-        'prefix': 'CALLLONG'
+        'prefix': 'LCALL'
         'body': 'LCALL ${1:addr}\n$2'
 
     'LJMP':
-        'prefix': 'JMPLONG'
+        'prefix': 'LJMP'
         'body': 'LJMP ${1:addr}\n$2'
 
 # M
@@ -166,11 +166,11 @@
 # O
 
     'ORL':
-        'prefix': 'LOR'
+        'prefix': 'OR'
         'body': 'ORL ${1:A}, ${2:srcbyte}\n$3'
 
     'ORL C':
-        'prefix': 'LORC'
+        'prefix': 'ORC'
         'body': 'ORL C, ${1:bit}\n$2'
 
 # P
@@ -214,7 +214,7 @@
 # S
 
     'SJMP':
-        'prefix': 'JMPSHORT'
+        'prefix': 'SJMP'
         'body': 'SJMP ${1:addr}\n$2'
 
     'SUB BORROW A,':
@@ -237,7 +237,7 @@
         'body': 'XCH A, ${1:srcbyte}\n$2'
 
     'XRL':
-        'prefix': 'LXOR'
+        'prefix': 'XOR'
         'body': 'XRL ${1:A}, ${2:srcbyte}\n$3'
 
 
