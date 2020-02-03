@@ -241,3 +241,246 @@
 
 # Y
 # Z
+
+
+# ===================================================================
+# Lowercase versions
+
+# a
+    'acall':
+        'prefix': 'callabsolute'
+        'body': 'acall ${1:addr}\n$2'
+
+    'add a,':
+        'prefix': 'add'
+        'body': 'add a, ${1:srcbyte}\n$2'
+
+    'addc a,':
+        'prefix': 'addc'
+        'body': 'addc a, ${1:srcbyte}\n$2'
+
+    'ajmp':
+        'prefix': 'jmpabsolute'
+        'body': 'ajmp ${1:addr}\n$2'
+
+    'anl':
+        'prefix': 'and'
+        'body': 'anl ${1:a}, ${2:srcbyte}\n$3'
+
+    'anl c':
+        'prefix': 'andc'
+        'body': 'anl c, ${1:bit}\n$2'
+
+# b
+
+# c
+
+    'cjne':
+        'prefix': 'cjne'
+        'body': 'cjne ${1:destbyte}, ${2:srcbyte}, ${3:target}\n$4'
+
+    'clr a':
+        'prefix': 'clra'
+        'body': 'clr a\n$1'
+
+    'clr bit':
+        'prefix': 'clrbit'
+        'body': 'clr ${1:c}\n$2'
+
+    'cpl a':
+        'prefix': 'cpla'
+        'body': 'cpl a\n$1'
+
+    'cpl bit':
+        'prefix': 'cplbit'
+        'body': 'cpl ${1:c}\n$2'
+
+# d
+
+    'da a':
+        'prefix': 'da'
+        'body': 'da a\n$1'
+
+    'dec byte':
+        'prefix': 'dec'
+        'body': 'dec ${1:a}\n$2'
+
+    'div ab':
+        'prefix': 'div'
+        'body': 'div ab\n$1'
+
+    'djnz':
+        'prefix': 'djnz'
+        'body': 'djnz ${1:byte}, ${2:addr}\n$3'
+
+    'file documentation':
+        'prefix': 'doc'
+        'body': """
+        ; ${1:filename}
+        ; ${2:version}
+        ; ${3:date}
+        ; ${4:author}
+        ; ${5:description of file}
+        $6
+        """
+# e
+# f
+# g
+# h
+
+# i
+
+    'inc byte':
+        'prefix': 'inc'
+        'body': 'inc ${1:byte}\n$2'
+
+# j
+
+    'jb bit':
+        'prefix': 'jb'
+        'body': 'jb ${1:bit}, ${2:label}\n$3'
+
+    'jnb bit':
+        'prefix': 'jnb'
+        'body': 'jnb ${1:bit}, ${2:label}\n$3'
+
+    'jbc bit':
+        'prefix': 'jbc'
+        'body': 'jbc ${1:bit}, ${2:label}\n$3'
+
+    'jc label':
+        'prefix': 'jc'
+        'body': 'jc ${1:label}\n$2'
+
+    'jmp @a+dptr':
+        'prefix': 'jmp@a+dptr'
+        'body': 'jmp @a+dptr\n$1'
+
+    'jnc label':
+        'prefix': 'jnc'
+        'body': 'jnc ${1:label}\n$2'
+
+    'jz label':
+        'prefix': 'jz'
+        'body': 'jz ${1:label}\n$2'
+
+    'jnz label':
+        'prefix': 'jnz'
+        'body': 'jnz ${1:label}\n$2'
+
+# k
+
+# l
+
+    'lcall':
+        'prefix': 'lcall'
+        'body': 'lcall ${1:addr}\n$2'
+
+    'ljmp':
+        'prefix': 'ljmp'
+        'body': 'ljmp ${1:addr}\n$2'
+
+# m
+
+    'mov':
+        'prefix': 'mov'
+        'body': 'mov ${1:dest}, ${2:source}\n$3'
+
+    'movc':
+        'prefix': 'movc'
+        'body': 'movc a, @a+${1:dptr}\n$2'
+
+    'movx':
+        'prefix': 'movx'
+        'body': 'movx ${1:dest}, ${2:source}\n$3'
+
+    'mul ab':
+        'prefix': 'mul'
+        'body': 'mul ab\n$1'
+
+# n
+
+    'no operation':
+        'prefix': 'nop'
+        'body': 'nop\n$1'
+
+# o
+
+    'orl':
+        'prefix': 'or'
+        'body': 'orl ${1:a}, ${2:srcbyte}\n$3'
+
+    'orl c':
+        'prefix': 'orc'
+        'body': 'orl c, ${1:bit}\n$2'
+
+# p
+
+    'pop stack':
+        'prefix': 'pop'
+        'body': 'pop ${1:direct}\n$2'
+
+    'push stack':
+        'prefix': 'push'
+        'body': 'push ${1:direct}\n$2'
+
+# q
+
+# r
+
+    'ret subroutine':
+        'prefix': 'ret'
+        'body': 'ret\n$1'
+
+    'ret interrupt':
+        'prefix': 'reti'
+        'body': 'reti\n$1'
+
+    'rotate left':
+        'prefix': 'rl'
+        'body': 'rl a\n$1'
+
+    'rotate left carry':
+        'prefix': 'rlc'
+        'body': 'rlc a\n$1'
+
+    'rotate right':
+        'prefix': 'rr'
+        'body': 'rr a\n$1'
+
+    'rotate right carry':
+        'prefix': 'rrc'
+        'body': 'rrc a\n$1'
+
+# s
+
+    'sjmp':
+        'prefix': 'sjmp'
+        'body': 'sjmp ${1:addr}\n$2'
+
+    'sub borrow a,':
+        'prefix': 'subb'
+        'body': 'subb a, ${1:srcbyte}\n$2'
+
+    'swap a':
+        'prefix': 'swap'
+        'body': 'swap a\n$1'
+
+# t
+# u
+# v
+# w
+
+# x
+
+    'exchange a,':
+        'prefix': 'xch'
+        'body': 'xch a, ${1:srcbyte}\n$2'
+
+    'xrl':
+        'prefix': 'xor'
+        'body': 'xrl ${1:a}, ${2:srcbyte}\n$3'
+
+
+# y
+# z
