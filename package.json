@@ -1,6 +1,6 @@
 {
   "name": "language-8051-assembly",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Syntax highlighting and snippets for 8051 assembly",
   "engines": {
     "atom": "*"
@@ -8,7 +8,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/pranavsb/language-8051-assembly.git"
+    "url": "https://github.com/a2k-hanlon/language-8051-assembly.git"
   },
   "license": "MIT"
 }
