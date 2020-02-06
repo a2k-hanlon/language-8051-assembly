@@ -10,7 +10,7 @@
             # highlighting important registers
             # comment it out if you don't prefer this
             {
-                'match': '(?i)\\b(A|ACC|C|DPTR|PC|PSW|A?R([0-9]+))\\b'
+                'match': '(?i)\\b(A|ACC|B|C|DPTR|PC|PSW|A?R([0-9]+))\\b'
                 'name': 'variable.language.important.register.8051-assembly'#'string.important.register.8051-assembly'
             },
 
