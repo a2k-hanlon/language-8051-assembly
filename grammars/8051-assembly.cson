@@ -10,7 +10,7 @@
             # highlighting important registers
             # comment it out if you don't prefer this
             {
-                'match': '(?i)\\b(A|ACC|B|C|DPTR|PC|PSW|A?R([0-9]+))\\b'
+                'match': '(?i)\\b(A|ACC|B|C|DPTR|DP[LH]|PC|PSW|A?R([0-9]+))\\b'
                 'name': 'variable.language.important.register.8051-assembly'#'string.important.register.8051-assembly'
             },
 
@@ -31,18 +31,24 @@
             },
 
             {
-                'match': '(;.*$)|(//.*$)'
+                'match': '(;.*$)'
                 'name': 'comment.line.8051-assembly'
             },
 
             {
-                'match': '(?i)\\b(ADD|ADDC|ANL|CJNE|CLR|CPL|DA|DEC|DIV|DJNZ|INC|JB|JNB|JBC|JC|JNC|JZ|JNZ|MOV|MOVC|MOVX|MUL|NOP|ORL|POP|PUSH|RL|RLC|RR|RRC|SETB|SUBB|SWAP|XCH|XRL)\\b'
+                'match': '(?i)\\b(ADD|ADDC|ANL|CJNE|CLR|CPL|DA|DEC|DIV|DJNZ|[^\\.]INC|JB|JNB|JBC|JC|JNC|JZ|JNZ|MOV|MOVC|MOVX|MUL|NOP|ORL|POP|PUSH|RL|RLC|RR|RRC|SETB|SUBB|SWAP|XCH|XRL)\\b'
                 'name': 'keyword.control.instruction.8051-assembly'
             },
 
             {
-                'match': '(?i)\\b(ORG|EQU|END|DB|DW|DS|DBIT|CSEG|DSEG|BSEG|XSEG|HIGH|LOW|MAC|ENDMAC|DATA|AT)\\b'
+                'match': '(?i)\\b(ORG|USING|EQU|SET|BIT|CODE|[IX]?DATA|DB|DW|DS|DBIT|SEGMENT|[RCDBXI]SEG|HIGH|LOW|MAC|ENDMAC|AT|END|PUBLIC|EXTERN)\\b'
                 'name': 'keyword.operator.assembler.directive.8051-assembly'
+            },
+
+            {
+                # These assembler controls can't use the word boundary anchor since '$' is a non-word character
+                'match': '(?i)(\\$INCLUDE|\\$MOD|\\$NOMOD51|\\$(NO)?LIST)'
+                'name': 'keyword.operator.assembler.controls.8051-assembly'
             },
 
             {
@@ -56,14 +62,21 @@
             # },
 
             {
-                'match': '\".*\"'
-                'name': 'string.double.8051-assembly'
+                'match': '([\"\'])((\\\\{2})*|(.*?[^\\\\](\\\\{2})*))\\1'
+                # Source: user "nico" on https://stackoverflow.com/questions/375104/how-can-i-match-a-quote-delimited-string-with-a-regex
+                # Note that \ must be delimited with a \ due to the cson parser (hence the strings of \)
+                'name': 'string.8051-assembly'
             },
 
-            {
-                'match': '\'.*\''
-                'name': 'string.single.8051-assembly'
-            },
+            # {
+            #     'match': '\".*\"'
+            #     'name': 'string.double.8051-assembly'
+            # },
+            #
+            # {
+            #     'match': '\'.*\''
+            #     'name': 'string.single.8051-assembly'
+            # },
 
             {
                 'match': '[@\\$]'
