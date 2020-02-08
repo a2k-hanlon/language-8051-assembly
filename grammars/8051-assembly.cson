@@ -68,16 +68,6 @@
                 'name': 'string.8051-assembly'
             },
 
-            # {
-            #     'match': '\".*\"'
-            #     'name': 'string.double.8051-assembly'
-            # },
-            #
-            # {
-            #     'match': '\'.*\''
-            #     'name': 'string.single.8051-assembly'
-            # },
-
             {
                 'match': '[@\\$]'
                 'name': 'keyword.operator.8051-assembly'
