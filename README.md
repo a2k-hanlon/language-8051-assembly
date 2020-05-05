@@ -4,7 +4,7 @@ Syntax highlighting and snippets for 8051 assembly, adapted for use alongside Cr
 This is a package for GitHub's Atom editor.
 
 This package is unlikely to be updated.
-Feel free to fork and modify according to your needs.
+Feel free to fork and modify according to your needs, or contribute directly to this repo if you have something useful to add!
 
 Code is **MIT licensed**.
 
