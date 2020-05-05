@@ -1,5 +1,5 @@
 {
-  "name": "language-8051-assembly",
+  "name": "language-8051-assembly-crosside",
   "version": "1.1.1",
   "description": "Syntax highlighting and snippets for 8051 assembly",
   "engines": {

@@ -1,11 +1,10 @@
-# language-8051-assembly package
+# language-8051-assembly-crosside package
 
-Syntax highlighting and snippets for 8051 assembly.
-
+Syntax highlighting and snippets for 8051 assembly, adapted for use alongside CrossIDE by Jesus Calvino-Fraga.
 This is a package for GitHub's Atom editor.
 
 This package is unlikely to be updated.
-Feel free to fork and modify according to your needs if you are trying out 8051 assembly!
+Feel free to fork and modify according to your needs.
 
 Code is **MIT licensed**.
 
